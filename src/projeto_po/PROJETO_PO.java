@@ -8,6 +8,7 @@ package projeto_po;
 import java.util.Scanner;
 import projeto_po.X.EmpresaAgropecuaria;
 import projeto_po.X.Funcionarios;
+import projeto_po.X.Gerente;
 
 /**
  *
@@ -32,7 +33,7 @@ public class PROJETO_PO {
         double salario;
        
         
-        do{
+        do{      
                     System.out.println("\t MENU - DIGITE: ");
                     System.out.println("1- Adicionar Funcionario");
                     System.out.println("2- Pagamento de Funcionarios ");
@@ -41,7 +42,7 @@ public class PROJETO_PO {
                     System.out.println("5- Sair ");
                     System.out.println(">");  
 
-                    opc = Integer.parseInt(in.nextLine());
+                    opc = Integer.parseInt(in.nextLine()); // variavel de controle para opcao
                     Funcionarios a = new Funcionarios();
                     
         switch(opc){
@@ -63,12 +64,12 @@ public class PROJETO_PO {
                     a.setNumCTB(numCTB);
                     
                     System.out.println("Informe o RG: ");
-                    
-                    System.out.println("Informe o salário: ");
-                    
+                    String RG = in.nextLine();
+                    a.setRG(RG);
+                                       
                     if(opc == 1 ){
-                        System.out.println(a.getNome());
-                        
+                        Gerente gerente = new Gerente(a.getNome(),a.getCpf(),a.getNumCTB(),a.getRG(),a.getSalario());
+                            
                     }
             
             case 2: 
