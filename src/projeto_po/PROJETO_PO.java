@@ -29,15 +29,15 @@ public class PROJETO_PO {
         System.out.println(" Empresa Agropecuaria ");
                 
         int opc;
-        
+        double salario;
        
         
         do{
                     System.out.println("\t MENU - DIGITE: ");
                     System.out.println("1- Adicionar Funcionario");
-                    System.out.println("2- Pagamento de FuncionarioS: 1- Gerente / 2 - Subgerente / 3- Secretário / 4- Empregados de Serviços gerais ");
-                    System.out.println("3- Financeiro: 1- Entrada de capital / 2- Saída de capital/ 3- Lucro");
-                    System.out.println("4- Relações de Negócio: 1- Gado/ 2- Cacau/ 3- Terras ocupadas com gado ");
+                    System.out.println("2- Pagamento de Funcionarios ");
+                    System.out.println("3- Financeiro ");
+                    System.out.println("4- Relações de Negócio ");
                     System.out.println("5- Sair ");
                     System.out.println(">");  
 
@@ -71,6 +71,24 @@ public class PROJETO_PO {
                         
                     }
             
+            case 2: 
+                System.out.println("Digite: 1- Gerente / 2 - Subgerente / 3- Secretário / 4- Empregados de Serviços gerais");
+                opc = Integer.parseInt(in.nextLine());
+                System.out.println("Informe o valor do salario pago R$ ");
+                salario = Double.parseDouble(in.nextLine());
+                a.setSalario(salario);
+                
+            case 3: 
+                System.out.println("Digite: 1- Entrada de capital / 2- Saída de capital/ 3- Lucro ");
+                opc = Integer.parseInt(in.nextLine());
+                System.out.println("Digite o valor R$ ");
+                
+                
+            case 4: 
+                System.out.println("Digite: 1- Gado | 2- Cacau | 3- Terras ocupadas com gado ");
+                opc = Integer.parseInt(in.nextLine());
+                
+                
         }            
         }while(opc!=5);
                

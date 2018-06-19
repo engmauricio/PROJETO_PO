@@ -15,7 +15,7 @@ public class Funcionarios {
     private String cpf;
     private String numCTB; //numero carteira de trabalho
     private String RG;
-    private double salario;
+    private Double salario;
     
     public Funcionarios(){
         
@@ -62,11 +62,11 @@ public class Funcionarios {
         this.RG = RG;
     }
 
-    public double getSalario() {
+    public Double getSalario() {
         return salario;
     }
 
-    public void setSalario(double salario) {
+    public void setSalario(Double salario) {
         this.salario = salario;
     }
     
