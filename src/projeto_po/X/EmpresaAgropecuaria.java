@@ -54,12 +54,7 @@ public class EmpresaAgropecuaria {
 
     public void setDono(String dono) {
         this.dono = dono;
-    } 
-
-    
-    
-    
-    
+    }
 }
 
 

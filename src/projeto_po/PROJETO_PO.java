@@ -6,9 +6,12 @@
 package projeto_po;
 
 import java.util.Scanner;
+import projeto_po.X.EmpServ;
 import projeto_po.X.EmpresaAgropecuaria;
 import projeto_po.X.Funcionarios;
 import projeto_po.X.Gerente;
+import projeto_po.X.Secretario;
+import projeto_po.X.SubGerente;
 
 /**
  *
@@ -30,7 +33,7 @@ public class PROJETO_PO {
         System.out.println(" Empresa Agropecuaria ");
                 
         int opc;
-        double salario;
+        double novosalario;
        
         
         do{      
@@ -66,29 +69,50 @@ public class PROJETO_PO {
                     System.out.println("Informe o RG: ");
                     String RG = in.nextLine();
                     a.setRG(RG);
-                                       
+                    
+                    System.out.println("Informe o Salario atual: ");
+                    Double salario =  Double.parseDouble(in.nextLine());
+                    a.setSalario(salario);
+                    
                     if(opc == 1 ){
                         Gerente gerente = new Gerente(a.getNome(),a.getCpf(),a.getNumCTB(),a.getRG(),a.getSalario());
                             
+                    }else if(opc == 2){
+                        SubGerente subgerente = new SubGerente(a.getNome(),a.getCpf(),a.getNumCTB(),a.getRG(),a.getSalario());
+                    }else if(opc == 3){
+                        Secretario secretario = new Secretario(a.getNome(),a.getCpf(),a.getNumCTB(),a.getRG(),a.getSalario());
+                    }else if(opc == 4){
+                        EmpServ empserv = new EmpServ(a.getNome(),a.getCpf(),a.getNumCTB(),a.getRG(),a.getSalario());
                     }
-            
+                    break;
             case 2: 
-                System.out.println("Digite: 1- Gerente / 2 - Subgerente / 3- Secretário / 4- Empregados de Serviços gerais");
+                System.out.println("Digite: 1- Gerente | 2 - Subgerente | 3- Secretário | 4- Empregados de Serviços gerais");
                 opc = Integer.parseInt(in.nextLine());
-                System.out.println("Informe o valor do salario pago R$ ");
-                salario = Double.parseDouble(in.nextLine());
-                a.setSalario(salario);
+                System.out.println("Informe o valor do salario pago mais horas extras R$ ");
+                novosalario = Double.parseDouble(in.nextLine());
+                a.setSalario(novosalario);
+                    if(opc == 1 ){
+                        Gerente gerente = new Gerente(a.getNome(),a.getCpf(),a.getNumCTB(),a.getRG(),a.getSalario());
+                            
+                    }else if(opc == 2){
+                        SubGerente subgerente = new SubGerente(a.getNome(),a.getCpf(),a.getNumCTB(),a.getRG(),a.getSalario());
+                    }else if(opc == 3){
+                        Secretario secretario = new Secretario(a.getNome(),a.getCpf(),a.getNumCTB(),a.getRG(),a.getSalario());
+                    }else if(opc == 4){
+                        EmpServ empserv = new EmpServ(a.getNome(),a.getCpf(),a.getNumCTB(),a.getRG(),a.getSalario());
+                    }
+                break;
                 
             case 3: 
-                System.out.println("Digite: 1- Entrada de capital / 2- Saída de capital/ 3- Lucro ");
+                System.out.println("Digite: 1- Entrada de capital | 2- Saída de capital | 3- Lucro ");
                 opc = Integer.parseInt(in.nextLine());
                 System.out.println("Digite o valor R$ ");
                 
-                
+                break;
             case 4: 
                 System.out.println("Digite: 1- Gado | 2- Cacau | 3- Terras ocupadas com gado ");
                 opc = Integer.parseInt(in.nextLine());
-                
+                break;
                 
         }            
         }while(opc!=5);

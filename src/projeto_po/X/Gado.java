@@ -9,14 +9,15 @@ package projeto_po.X;
  *
  * @author EngMauricio
  */
-public class EmpregadosServiçosGerais extends Funcionarios {
+public class Gado extends Negocio{
     
-public EmpregadosServiçosGerais(){
+    public Gado(){
         
     }
-    public EmpregadosServiçosGerais(String nome, String cpf, String numCTB, String RG, double salario){
+    public Gado(int Qnt, Double Precporkg){
+        super(Qnt, Precporkg);
         
-        super(nome, cpf, numCTB, RG, salario);
-    }
-
+        
+    }   
+    
 }
