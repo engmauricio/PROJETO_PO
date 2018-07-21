@@ -14,10 +14,18 @@ public class Gado extends Negocio{
     public Gado(){
         
     }
-    public Gado(int Qnt, Double Precporkg){
-        super(Qnt, Precporkg);
+    public Gado(Double Qnt, Double Preco){
+        super(Qnt, Preco);
         
         
     }   
-    
+
+    /**
+     *
+     * @return
+     */
+    public Double ValorGado(){
+        return getQnt()*getPreco();
+          
+    }
 }

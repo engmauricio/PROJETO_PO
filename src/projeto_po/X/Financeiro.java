@@ -11,4 +11,53 @@ package projeto_po.X;
  */
 public class Financeiro {
     
+    private Double EntCapital;
+    private Double SaiCapital;
+    private Double Relatorio;
+   // public Double GerarSaldoCapital;
+    
+    public Financeiro(){
+        
+    }
+
+//    public Financeiro(Double EntCapital, Double SaiCapital, Double Relatorio){
+//        
+//        this.EntCapital = EntCapital;
+//        this.SaiCapital = SaiCapital;
+//        this.Relatorio = Relatorio;
+//        
+//    }
+    
+        
+    public Double getEntCapital() {
+        return EntCapital;
+    }
+
+    public void setEntCapital(Double EntCapital) {
+        this.EntCapital = EntCapital;
+    }
+
+    public Double getSaiCapital() {
+        return SaiCapital;
+    }
+
+    public void setSaiCapital(Double SaiCapital) {
+        this.SaiCapital = SaiCapital;
+    }
+
+    public Double getRelatorio() {
+        return Relatorio;
+    
+    }
+
+    public void setRelatorio(Double Relatorio) {
+        this.Relatorio = Relatorio;
+   
+    }
+       
+   public Double GerarSaldoCapital(){
+       
+       return  getEntCapital() - getSaiCapital();
+          
+    }
 }

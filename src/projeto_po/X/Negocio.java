@@ -11,33 +11,68 @@ package projeto_po.X;
  */
 public class Negocio {
   
-    private int Qnt; 
-    private Double Precporkg;
+    private Double Qnt; 
+    private Double Preco;  
+    private Double a;
+    private Double b;
+    private Double c;
     //private 
     
     public Negocio(){
         
     }
-    public Negocio(int Qnt, Double Precporkg){
+
+      
+    public Double GerarBalanco(){
+    
+        return getA() + getB() + getC();
+   
+    }    
+    public Negocio(Double Qnt, Double Preco){
         
-        this.Precporkg = Precporkg;
+        this.Preco = Preco;
         this.Qnt = Qnt;        
     }
 
-    public int getQnt() {
+    public Double getQnt() {
         return Qnt;
     }
 
-    public void setQnt(int Qnt) {
+    public void setQnt(Double Qnt) {
         this.Qnt = Qnt;
     }
 
-    public Double getPrecporkg() {
-        return Precporkg;
+    public Double getPreco() {
+        return Preco;
     }
 
-    public void setPrecporkg(Double Precporkg) {
-        this.Precporkg = Precporkg;
+    public void setPreco(Double Preco) {
+        this.Preco = Preco;
     }
+
+    public Double getA() {
+        return a;
+    }
+
+    public void setA(Double a) {
+        this.a = a;
+    }
+
+    public Double getB() {
+        return b;
+    }
+
+    public void setB(Double b) {
+        this.b = b;
+    }
+
+    public Double getC() {
+        return c;
+    }
+
+    public void setC(Double c) {
+        this.c = c;
+    }
+    
         
 }

@@ -16,7 +16,7 @@ public class EmpresaAgropecuaria {
     private String nome;
     private String endereco;
     private String dono;
-    private ArrayList<Funcionarios> funcionairios = new ArrayList<>();
+    private ArrayList<Funcionarios> Funcionarios = new ArrayList<>();
     private ArrayList<Negocio> negocio = new ArrayList<>(); 
     private ArrayList<Financeiro> financeiro = new ArrayList<>();
      

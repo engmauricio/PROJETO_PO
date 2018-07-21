@@ -9,23 +9,22 @@ package projeto_po.X;
  *
  * @author EngMauricio
  */
-public class Cacau extends Negocio {
+public class Terras extends Negocio {
     
-    public Cacau(){
+     public Terras(){
         
     }
-    public Cacau(Double Qnt, Double Preco){
+    public Terras(Double Qnt, Double Preco){
         super(Qnt, Preco);
         
-    }
+    } 
 
     /**
      *
      * @return
      */
-    public Double ValorCacau(){
+    public Double ValorTerras(){
         return getQnt()*getPreco();
           
     }
-    
 }
